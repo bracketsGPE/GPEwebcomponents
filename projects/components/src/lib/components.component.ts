@@ -19,7 +19,9 @@ export class ComponentsComponent implements OnInit {
   @Output() saveClicked: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(connect)
+  }
 
   sendRequest() {
     this.saveClicked.emit('kjdaslkfhjalskdhflksdhf');
