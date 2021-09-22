@@ -7,9 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:elements": "ng build --prod --project elements --output-hashing none && npm run pack:elements && cp projects/elements/package.json dist/elements",
-    "pack:elements": "cat ./dist/elements/{runtime,polyfills,main}-es5.js > dist/elements/elements.js && ls -lah dist/elements/elements.js",
-    "build:components": "ng build --prod --project components"
+    "build:components": "ng build --project components",
+    "build:elements": "ng build --project elements --output-hashing none",
+    "pack:elements": "cp projects/elements/package.json dist/elements && cat ./dist/elements/{runtime,polyfills,main}.js > ./dist/elements/elements.js && ls -lah ./dist/elements/elements.js",
+    "test:elements": "serve .",
+    "dev": "npm run build:components && npm run build:elements"
   },
   "private": true,
   "dependencies": {
@@ -40,6 +42,7 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-packagr": "^12.1.1",
+    "serve": "^12.0.1",
     "typescript": "~4.3.5"
   }
 }
