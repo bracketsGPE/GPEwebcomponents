@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { connect } from 'webcomponents-redux';
 
 @Component({
   selector: 'lib-components',
