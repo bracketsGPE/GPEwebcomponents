@@ -1,30 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { connect } from 'webcomponents-redux';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'lib-components',
-  template: `
-    <h1>{{ title }}</h1>
-    <p>
-      {{ body }}
-    </p>
-    <button (click)="sendRequest()"></button>
-  `,
-  styles: [
-  ]
+  template: `<lib-portal-modal></lib-portal-modal>`,
+  styles: []
 })
-export class ComponentsComponent implements OnInit {
-  @Input() title: string = '';
-  @Input() body: string = '';
-  @Output() saveClicked: EventEmitter<any> = new EventEmitter();
+export class ComponentsComponent {
   constructor() { }
-
-  ngOnInit(): void {
-    console.log(connect)
-  }
-
-  sendRequest() {
-    this.saveClicked.emit('kjdaslkfhjalskdhflksdhf');
-  }
-
 }

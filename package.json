@@ -9,8 +9,9 @@
     "test": "ng test",
     "build:components": "ng build --project components",
     "build:elements": "ng build --project elements --output-hashing none",
-    "pack:elements": "cp projects/elements/package.json dist/elements && cat ./dist/elements/{runtime,polyfills,main}.js > ./dist/elements/elements.js && ls -lah ./dist/elements/elements.js",
-    "test:elements": "serve .",
+    "cp:elements": "cp projects/elements/package.json dist/elements && ",
+    "cat:elements": "cat ./dist/elements/{runtime,polyfills,main}.js > ./dist/elements/elements.js && ls -lah ./dist/elements/elements.js",
+    "test_as_components:elements": "serve .",
     "dev": "npm run build:components && npm run build:elements"
   },
   "private": true,

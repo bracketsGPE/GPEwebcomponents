@@ -7,6 +7,10 @@
       "components": [
         "dist/components/components",
         "dist/components"
+      ],
+      "portal-modal": [
+        "dist/portal-modal/portal-modal",
+        "dist/portal-modal"
       ]
     },
     "outDir": "./dist/out-tsc",
